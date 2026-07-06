@@ -55,6 +55,34 @@ As seções de fundamentos de R foram incluídas especificamente para cobrir lac
 
 Copie o conteúdo de `r-stats-skill.md` como system prompt do seu modelo de preferência, ou registre o arquivo como skill/comando em ferramentas que suportem esse formato.
 
+## Como carregar direto do GitHub no seu agente de código
+
+O padrão geral é sempre o mesmo: baixar o arquivo raw do GitHub e salvá-lo na pasta de prompts/comandos customizados da sua ferramenta.
+
+Link raw do arquivo:
+`https://raw.githubusercontent.com/diegoamrg4123/ai-skill-for-r-stats/main/r-stats-skill.md`
+
+Baixar via terminal:
+```bash
+curl -o r-stats-skill.md https://raw.githubusercontent.com/diegoamrg4123/ai-skill-for-r-stats/main/r-stats-skill.md
+```
+
+Depois, em cada ferramenta:
+
+**Claude Code**
+Salve o arquivo em `~/.claude/commands/r-stats.md` (ou dentro de uma pasta de skill em `~/.claude/skills/`). Depois é só chamar com `/r-stats` em qualquer sessão.
+
+**Codex CLI**
+Cole o conteúdo do arquivo nas instruções customizadas do projeto (`AGENTS.md`) ou nas configurações de system prompt da sessão.
+
+**Antigravity**
+Adicione o conteúdo como instrução customizada/system prompt do agente, na área de configuração de contexto do projeto.
+
+**OpenCode**
+Salve o arquivo na pasta de agentes/prompts customizados do projeto (normalmente `.opencode/` ou equivalente) e referencie ao iniciar a sessão.
+
+Cada ferramenta tem sua própria convenção de pasta e pode mudar com novas versões, então vale conferir a documentação oficial de custom prompts/commands da ferramenta escolhida. O importante é que o arquivo `r-stats-skill.md` é autocontido: basta colar o texto inteiro como instrução para o agente passar a segui-lo.
+
 ## Licença
 
 MIT. Veja o arquivo `LICENSE` para o texto completo.
