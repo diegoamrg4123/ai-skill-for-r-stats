@@ -83,6 +83,28 @@ Salve o arquivo na pasta de agentes/prompts customizados do projeto (normalmente
 
 Cada ferramenta tem sua própria convenção de pasta e pode mudar com novas versões, então vale conferir a documentação oficial de custom prompts/commands da ferramenta escolhida. O importante é que o arquivo `r-stats-skill.md` é autocontido: basta colar o texto inteiro como instrução para o agente passar a segui-lo.
 
+### Exemplo de prompt para o agente baixar e carregar sozinho
+
+Se o seu agente de código tiver acesso a terminal ou a busca na web, você pode simplesmente pedir para ele mesmo buscar, baixar e se configurar para seguir a skill, sem precisar fazer nada manualmente:
+
+```
+Baixe o arquivo em
+https://raw.githubusercontent.com/diegoamrg4123/ai-skill-for-r-stats/main/r-stats-skill.md
+e salve como comando/skill customizado seguindo a convenção da sua própria
+ferramenta (por exemplo, em Claude Code seria ~/.claude/commands/r-stats.md).
+A partir de agora, sempre que eu pedir ajuda com R ou estatística, siga
+integralmente as instruções desse arquivo.
+```
+
+Se preferir só usar na sessão atual, sem salvar nada permanente, um prompt mais simples resolve:
+
+```
+Baixe o conteúdo de
+https://raw.githubusercontent.com/diegoamrg4123/ai-skill-for-r-stats/main/r-stats-skill.md
+e passe a seguir essas instruções como seu comportamento para o resto
+desta conversa.
+```
+
 ## Licença
 
 MIT. Veja o arquivo `LICENSE` para o texto completo.
