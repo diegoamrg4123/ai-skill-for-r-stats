@@ -57,4 +57,4 @@ Copie o conteúdo de `r-stats-skill.md` como system prompt do seu modelo de pref
 
 ## Licença
 
-Sem licença definida ainda. Uso pessoal e educacional.
+MIT. Veja o arquivo `LICENSE` para o texto completo.
