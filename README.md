@@ -2,6 +2,20 @@
 
 Uma skill (system prompt) para agentes de IA especializados em R e estatística aplicada. O objetivo central é ser model agnostic: qualquer LLM, incluindo modelos locais pequenos sem treinamento prévio em R, deve conseguir seguir as instruções e produzir código correto.
 
+## Aviso importante antes de usar
+
+Uma skill nada mais é do que um arquivo de texto com instruções que você entrega para o seu agente de IA seguir. Isso significa que, na prática, qualquer pessoa pode publicar uma skill na internet com instruções problemáticas escondidas no meio do texto.
+
+Antes de carregar qualquer skill (essa ou qualquer outra que você encontrar por aí) no seu agente de código:
+
+- Leia o conteúdo do arquivo, ou peça para o seu próprio agente resumir o que ele faz, antes de carregar.
+- Prefira skills de fontes que você conhece ou que tenham sido recomendadas por alguém de confiança.
+- Se ficar em dúvida sobre o que o arquivo faz ou se ele é seguro, simplesmente não use. Não tem problema nenhum em pular essa etapa.
+
+Essa skill em particular contém apenas instruções sobre como escrever e explicar código em R e estatística, nada além disso. Mas o aviso vale de forma geral: não crie o hábito de baixar e carregar qualquer skill que aparecer pela frente sem entender o que ela faz.
+
+Uma alternativa interessante, e muitas vezes até melhor, é pedir para o seu próprio agente de código criar uma skill de R personalizada com base nas interações que vocês já tiveram em uma sessão de trabalho. Assim, a skill reflete exatamente o seu jeito de usar R, o tipo de análise que você mais faz e o nível de explicação que funciona melhor para você, em vez de depender do estilo de outra pessoa.
+
 ## Arquivo principal
 
 `r-stats-skill.md` é o único artefato do projeto. Ele pode ser usado como system prompt completo em qualquer LLM (Claude, GPT, Gemini, Llama, Mistral, etc.) ou carregado como skill/comando em ferramentas como o Claude Code.
